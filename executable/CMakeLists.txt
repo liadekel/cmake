@@ -12,7 +12,9 @@ find_package(headeronly)
 # Create target of type executable and set it's sources list
 add_executable(executable executable.c)
 
-# link together with sharedlibrary (will add the famous -lsharedlibrary).
+# Link together with sharedlibrary (will add the famous -lsharedlibrary).
+# When indicating `PRIVATE`, the linking flag won't pass on dependent
+# and only this project will use it.
 target_link_libraries(executable PRIVATE sharedlibrary)
 
 # add include directory (will add the famous -Iinclude/)
