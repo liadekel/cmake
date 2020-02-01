@@ -5,7 +5,7 @@ include(GNUInstallDirs)
 add_library(headeronly INTERFACE)
 
 install(DIRECTORY include/
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.h")
 
 
